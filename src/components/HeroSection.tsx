@@ -20,7 +20,7 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-[92vh] lg:min-h-screen w-full overflow-hidden bg-white flex items-center justify-center pt-24 sm:pt-28 pb-6 md:pb-10">
-      {/* 1. Underlying Baby Blue DotPattern Background */}
+      {/* 1. Base Baby Blue Dot Pattern Background */}
       <DotPattern
         width={24}
         height={24}
@@ -32,9 +32,14 @@ export function HeroSection() {
         )}
       />
 
-      {/* 2. Soft, subtle opacity-lowering overlay directly under the text and cluster (lowering dot intensity to ~20-25% rather than blocking out with solid white) */}
-      <div className="absolute top-[48%] -translate-y-1/2 right-[0%] lg:right-[3%] w-[680px] sm:w-[740px] h-[520px] sm:h-[580px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(255,255,255,0.72)_0%,rgba(255,255,255,0.55)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
-      <div className="absolute top-1/2 -translate-y-1/2 left-[2%] lg:left-[6%] w-[460px] sm:w-[500px] h-[460px] sm:h-[500px] rounded-full [background:radial-gradient(circle_at_center,rgba(255,255,255,0.7)_0%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
+      {/* 2. Desktop Fading Overlays (Unchanged) */}
+      <div className="hidden lg:block absolute top-[48%] -translate-y-1/2 right-[0%] lg:right-[3%] w-[680px] sm:w-[740px] h-[520px] sm:h-[580px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(255,255,255,0.72)_0%,rgba(255,255,255,0.55)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
+      <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-[2%] lg:left-[6%] w-[460px] sm:w-[500px] h-[460px] sm:h-[500px] rounded-full [background:radial-gradient(circle_at_center,rgba(255,255,255,0.7)_0%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
+
+      {/* 3. Mobile Precision Fading Overlays: Smooth localized opacity reduction under the exact elements */}
+      <div className="lg:hidden absolute top-[18%] left-1/2 -translate-x-1/2 w-[340px] h-[340px] rounded-full [background:radial-gradient(circle_at_center,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
+      <div className="lg:hidden absolute top-[52%] left-1/2 -translate-x-1/2 w-[380px] h-[360px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0.5)_55%,rgba(255,255,255,0)_85%)] pointer-events-none z-[2]" />
+      <div className="lg:hidden absolute bottom-[4%] left-1/2 -translate-x-1/2 w-[340px] h-[160px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0.4)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">

@@ -27,7 +27,7 @@ export function Features() {
         style={{ opacity, y }}
         className="mx-auto max-w-5xl lg:max-w-6xl px-6"
       >
-        {/* Section Header (Without the pill) */}
+        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-zinc-950 tracking-tight">
             Everything you need to excel in CBE
@@ -102,62 +102,68 @@ export function Features() {
               </CardContent>
             </Card>
 
-            {/* Card 4: 24/7 AI Tutor with MiyagiGazeAvatar */}
-            <Card className="group relative col-span-full overflow-hidden lg:col-span-3 bg-white border border-zinc-200 hover:border-[#FF6B00]/60 transition-all rounded-2xl p-5 sm:p-7 min-h-[200px] shadow-sm hover:shadow-md">
-              <CardContent className="p-0 grid h-full sm:grid-cols-2 gap-4 items-center">
-                <div className="relative z-10 flex flex-col justify-center space-y-3">
-                  <div className="relative flex aspect-square size-11 rounded-full border border-orange-500/30 bg-orange-50 items-center justify-center transform group-hover:scale-110 transition-transform">
+            {/* Card 4: 24/7 AI Tutor with MiyagiGazeAvatar (Mobile: Centered & Mascot on Top; Desktop: Unchanged Left/Right layout) */}
+            <Card className="group relative col-span-full overflow-hidden lg:col-span-3 bg-white border border-zinc-200 hover:border-[#FF6B00]/60 transition-all rounded-2xl p-6 sm:p-7 min-h-[200px] shadow-sm hover:shadow-md">
+              <CardContent className="p-0 flex flex-col items-center text-center sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center sm:text-left">
+                
+                {/* Visual Top Container on Mobile / Right Column on Desktop */}
+                <div className="order-1 sm:order-2 relative z-10 flex items-center justify-center sm:justify-end mb-4 sm:mb-0">
+                  <div className="transform group-hover:scale-110 group-hover:-translate-y-1.5 transition-all duration-300">
+                    <MiyagiGazeAvatar size={135} className="drop-shadow-[0_12px_28px_rgba(255,107,0,0.25)]" />
+                  </div>
+                </div>
+
+                {/* Content Area: Centered text on mobile, left on desktop */}
+                <div className="order-2 sm:order-1 relative z-10 flex flex-col justify-center items-center sm:items-start space-y-2 sm:space-y-3">
+                  <div className="hidden sm:flex relative aspect-square size-11 rounded-full border border-orange-500/30 bg-orange-50 items-center justify-center transform group-hover:scale-110 transition-transform">
                     <Sparkles className="size-5 text-[#FF6B00]" strokeWidth={2} />
                   </div>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-bold text-zinc-950 tracking-tight mb-1.5">
                       24/7 AI Tutor
                     </h3>
-                    <p className="text-xs sm:text-sm font-medium text-zinc-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm font-medium text-zinc-600 leading-relaxed max-w-sm sm:max-w-none">
                       Doubt-solving tutor using the Socratic method that guides students step-by-step toward the answer.
                     </p>
-                  </div>
-                </div>
-
-                {/* Right Mascot with Eye Tracking Pop-out */}
-                <div className="relative z-10 flex items-center justify-center sm:justify-end">
-                  <div className="transform group-hover:scale-110 group-hover:-translate-y-1.5 transition-all duration-300">
-                    <MiyagiGazeAvatar size={135} className="drop-shadow-[0_12px_28px_rgba(255,107,0,0.25)]" />
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Card 5: Complete CBE Coverage (Maths, Sciences, Kiswahili) */}
-            <Card className="group relative col-span-full overflow-hidden lg:col-span-3 bg-white border border-zinc-200 hover:border-violet-500/60 transition-all rounded-2xl p-5 sm:p-7 min-h-[200px] shadow-sm hover:shadow-md">
-              <CardContent className="p-0 grid h-full sm:grid-cols-2 gap-4 items-center">
-                <div className="relative z-10 flex flex-col justify-center space-y-3">
-                  <div className="relative flex aspect-square size-11 rounded-full border border-violet-500/30 bg-violet-50 items-center justify-center transform group-hover:scale-110 transition-transform">
+            {/* Card 5: Complete CBE Coverage (Mobile: Centered & Subject List on Top; Desktop: Unchanged Left/Right layout) */}
+            <Card className="group relative col-span-full overflow-hidden lg:col-span-3 bg-white border border-zinc-200 hover:border-violet-500/60 transition-all rounded-2xl p-6 sm:p-7 min-h-[200px] shadow-sm hover:shadow-md">
+              <CardContent className="p-0 flex flex-col items-center text-center sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center sm:text-left">
+                
+                {/* Visual Top Container on Mobile / Right Column on Desktop */}
+                <div className="order-1 sm:order-2 relative z-10 w-full flex justify-center sm:justify-end mb-5 sm:mb-0">
+                  <div className="rounded-xl border border-zinc-200 p-3.5 bg-zinc-50 flex flex-col justify-center space-y-2 shadow-inner w-full max-w-[240px] sm:max-w-[200px] transform group-hover:scale-106 group-hover:-translate-y-1 transition-all duration-300">
+                    <div className="text-xs font-bold text-zinc-900 flex items-center justify-between">
+                      <span>Mathematics</span>
+                      <span className="text-[10px] text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">Active</span>
+                    </div>
+                    <div className="text-xs font-bold text-zinc-900 flex items-center justify-between">
+                      <span>Integrated Science</span>
+                      <span className="text-[10px] text-sky-600 font-bold bg-sky-50 px-1.5 py-0.5 rounded">Active</span>
+                    </div>
+                    <div className="text-xs font-bold text-zinc-900 flex items-center justify-between">
+                      <span>English & Kiswahili</span>
+                      <span className="text-[10px] text-violet-600 font-bold bg-violet-50 px-1.5 py-0.5 rounded">Active</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content Area: Centered text on mobile, left on desktop */}
+                <div className="order-2 sm:order-1 relative z-10 flex flex-col justify-center items-center sm:items-start space-y-2 sm:space-y-3">
+                  <div className="hidden sm:flex relative aspect-square size-11 rounded-full border border-violet-500/30 bg-violet-50 items-center justify-center transform group-hover:scale-110 transition-transform">
                     <CheckCircle2 className="size-5 text-violet-600" strokeWidth={2} />
                   </div>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-bold text-zinc-950 tracking-tight mb-1.5">
                       Complete CBE Coverage
                     </h3>
-                    <p className="text-xs sm:text-sm font-medium text-zinc-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm font-medium text-zinc-600 leading-relaxed max-w-sm sm:max-w-none">
                       Maths, Sciences, English, Kiswahili, Social Studies, and CRE across all primary and secondary levels.
                     </p>
-                  </div>
-                </div>
-
-                {/* Right Subject tags list */}
-                <div className="relative z-10 rounded-xl border border-zinc-200 p-3.5 bg-zinc-50 flex flex-col justify-center space-y-2 shadow-inner w-full max-w-[200px] sm:ml-auto transform group-hover:scale-106 group-hover:-translate-y-1 transition-all duration-300">
-                  <div className="text-xs font-bold text-zinc-900 flex items-center justify-between">
-                    <span>Mathematics</span>
-                    <span className="text-[10px] text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">Active</span>
-                  </div>
-                  <div className="text-xs font-bold text-zinc-900 flex items-center justify-between">
-                    <span>Integrated Science</span>
-                    <span className="text-[10px] text-sky-600 font-bold bg-sky-50 px-1.5 py-0.5 rounded">Active</span>
-                  </div>
-                  <div className="text-xs font-bold text-zinc-900 flex items-center justify-between">
-                    <span>English & Kiswahili</span>
-                    <span className="text-[10px] text-violet-600 font-bold bg-violet-50 px-1.5 py-0.5 rounded">Active</span>
                   </div>
                 </div>
               </CardContent>
