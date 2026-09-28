@@ -4,7 +4,9 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
+import { DotPattern } from "@/components/ui/dot-pattern";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export function TeacherTools() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -81,18 +83,37 @@ export function TeacherTools() {
   ];
 
   return (
-    <section id="teachers" ref={containerRef} className="py-12 md:py-16 bg-zinc-50 border-y border-zinc-200/80 transition-colors">
+    <section
+      id="teachers"
+      ref={containerRef}
+      className="relative py-14 md:py-20 bg-white overflow-hidden transition-colors"
+    >
+      {/* 1. Seamless Baby Blue Dot Matrix Background with top & bottom smooth linear blend */}
+      <DotPattern
+        width={24}
+        height={24}
+        cx={1.5}
+        cy={1.5}
+        cr={1.5}
+        className={cn(
+          "fill-[#38bdf8]/60 [mask-image:linear-gradient(to_bottom,transparent_0%,black_15%,black_85%,transparent_100%)]",
+        )}
+      />
+
+      {/* 2. Soft radial fade under the cards container to keep cards crisp */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/30 pointer-events-none z-[1]" />
+
       <motion.div
         style={{ opacity, y }}
-        className="mx-auto max-w-6xl px-6"
+        className="relative z-10 mx-auto max-w-6xl px-6"
       >
-        {/* Section Header with stretched single-line heading */}
+        {/* Section Header with High-Contrast Solid Orange Pill & Orange 'save 2 hours' Highlight */}
         <div className="w-full max-w-5xl mx-auto mb-10 text-center">
           <span className="text-xs uppercase font-extrabold tracking-wider px-4 py-1.5 rounded-full bg-[#FF6B00] text-white shadow-sm shadow-orange-500/25 mb-4 inline-block">
             FOR TEACHERS
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold tracking-tight text-zinc-950 whitespace-nowrap">
-            Our tools help teachers save 2 hours a day
+            Our tools help teachers <span className="text-[#FF6B00]">save 2 hours</span> a day
           </h2>
         </div>
 
@@ -102,7 +123,7 @@ export function TeacherTools() {
             <Link
               key={idx}
               href={tool.link}
-              className="group relative rounded-2xl bg-white border border-orange-500/25 hover:border-orange-500/60 p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between min-h-[250px] sm:min-h-[265px] overflow-hidden shadow-[0_0_24px_-4px_rgba(255,107,0,0.06)] hover:shadow-[0_0_36px_-2px_rgba(255,107,0,0.18)]"
+              className="group relative rounded-2xl bg-white/95 backdrop-blur-sm border border-orange-500/25 hover:border-orange-500/60 p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between min-h-[250px] sm:min-h-[265px] overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(255,107,0,0.18)]"
             >
               {/* Left Content Column */}
               <div className="relative z-10 max-w-[62%] sm:max-w-[64%]">

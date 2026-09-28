@@ -22,6 +22,7 @@ export function PickYourExam() {
       grade: "Grade 6 Assessment",
       color: "from-emerald-500/10 via-emerald-500/5 to-transparent",
       borderColor: "hover:border-emerald-500/60",
+      ctaHoverColor: "group-hover:text-emerald-600",
       url: "https://miyagilabs.ai/ke/kpsea",
       points: [
         "CBC Grade 6 National Assessment Past Papers",
@@ -34,6 +35,7 @@ export function PickYourExam() {
       grade: "Grade 9 Junior School",
       color: "from-sky-500/10 via-sky-500/5 to-transparent",
       borderColor: "hover:border-sky-500/60",
+      ctaHoverColor: "group-hover:text-sky-600",
       url: "https://miyagilabs.ai/ke/kjsea",
       points: [
         "Comprehensive Grade 7–9 CBE Topical Questions",
@@ -46,6 +48,7 @@ export function PickYourExam() {
       grade: "Form 4 National Exam",
       color: "from-orange-500/10 via-orange-500/5 to-transparent",
       borderColor: "hover:border-orange-500/60",
+      ctaHoverColor: "group-hover:text-[#FF6B00]",
       url: "https://miyagilabs.ai/ke/kcse",
       points: [
         "15+ Years KCSE Past Papers with Step-by-Step Marking",
@@ -68,7 +71,7 @@ export function PickYourExam() {
           </h2>
         </div>
 
-        {/* 3-Card Grid with soft top gradient backgrounds restored */}
+        {/* 3-Card Grid with customized CTA hover colors matching each card's theme */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {exams.map((exam, i) => (
             <Link
@@ -101,8 +104,8 @@ export function PickYourExam() {
                 </div>
               </div>
 
-              {/* Bottom CTA */}
-              <div className="relative z-10 pt-4 border-t border-zinc-100 flex items-center justify-between text-xs sm:text-sm font-bold tracking-wider uppercase text-zinc-900 group-hover:text-[#FF6B00] transition-colors">
+              {/* Bottom CTA with exact matching gradient/theme color */}
+              <div className={`relative z-10 pt-4 border-t border-zinc-100 flex items-center justify-between text-xs sm:text-sm font-bold tracking-wider uppercase text-zinc-900 ${exam.ctaHoverColor} transition-colors`}>
                 <span>Start Practice</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
               </div>
