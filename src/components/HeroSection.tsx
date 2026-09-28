@@ -3,11 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CloudShader } from "@/components/ui/cloud-shader";
+import { DotPattern } from "@/components/ui/dot-pattern";
 import { FadeWord } from "@/components/ui/fade-word";
 import { AvatarCircles } from "@/components/ui/avatar-circles";
 import { RippleButton } from "@/components/ui/ripple-button";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export function HeroSection() {
   const avatarUrls = [
@@ -18,26 +19,27 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-[95vh] lg:min-h-screen w-full overflow-hidden bg-white flex items-center justify-center pt-24 sm:pt-28 pb-4 md:pb-6">
-      {/* CloudShader Background with extended linear fade */}
-      <div className="absolute inset-0 z-0 pointer-events-none [mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.9)_90%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.9)_90%,transparent_100%)]">
-        <CloudShader
-          className="h-full w-full opacity-95"
-          speed={0.75}
-          count={5}
-          cloudColor="#ffffff"
-          skyTopColor="#3876ba"
-          skyBottomColor="#a3cef1"
-        />
-      </div>
+    <section className="relative min-h-[92vh] lg:min-h-screen w-full overflow-hidden bg-white flex items-center justify-center pt-24 sm:pt-28 pb-6 md:pb-10">
+      {/* 1. Underlying Baby Blue DotPattern Background */}
+      <DotPattern
+        width={24}
+        height={24}
+        cx={1.5}
+        cy={1.5}
+        cr={1.5}
+        className={cn(
+          "fill-[#38bdf8]/60 [mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.4)_90%,transparent_100%)]",
+        )}
+      />
 
-      {/* Gentle White Gradient Mesh Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/90 pointer-events-none z-[1]" />
+      {/* 2. Soft, subtle opacity-lowering overlay directly under the text and cluster (lowering dot intensity to ~20-25% rather than blocking out with solid white) */}
+      <div className="absolute top-[48%] -translate-y-1/2 right-[0%] lg:right-[3%] w-[680px] sm:w-[740px] h-[520px] sm:h-[580px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(255,255,255,0.72)_0%,rgba(255,255,255,0.55)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
+      <div className="absolute top-1/2 -translate-y-1/2 left-[2%] lg:left-[6%] w-[460px] sm:w-[500px] h-[460px] sm:h-[500px] rounded-full [background:radial-gradient(circle_at_center,rgba(255,255,255,0.7)_0%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
           
-          {/* LEFT COLUMN: Tightly packed 3D cluster (Reverted to the balanced layout) */}
+          {/* LEFT COLUMN: Tightly packed 3D cluster */}
           <div className="lg:col-span-5 relative flex items-center justify-center w-full min-h-[420px] sm:min-h-[460px]">
             
             {/* Clustered stage area */}
