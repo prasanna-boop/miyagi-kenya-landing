@@ -13,3 +13,16 @@
     scroll-behavior: smooth;
   }
 }
+
+@keyframes infiniteSlideHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-slide-horizontal {
+  animation: infiniteSlideHorizontal linear infinite;
+}

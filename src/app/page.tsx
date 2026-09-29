@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
 import { Features } from "@/components/blocks/features-8";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { PickYourExam } from "@/components/PickYourExam";
 import { TeacherTools } from "@/components/TeacherTools";
 import { GetTheApp } from "@/components/GetTheApp";
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <Features />
+      <TestimonialsSection />
       <PickYourExam />
       <TeacherTools />
       <GetTheApp />

@@ -12,15 +12,15 @@ import { cn } from "@/lib/utils";
 
 export function HeroSection() {
   const avatarUrls = [
-    { imageUrl: "/student_1.jpg", profileUrl: "#" },
-    { imageUrl: "/student_2.jpg", profileUrl: "#" },
-    { imageUrl: "/student_3.jpg", profileUrl: "#" },
-    { imageUrl: "/student_4.jpg", profileUrl: "#" },
+    { imageUrl: "/student_ke_1.jpg", profileUrl: "#" },
+    { imageUrl: "/student_ke_2.jpg", profileUrl: "#" },
+    { imageUrl: "/student_ke_3.jpg", profileUrl: "#" },
+    { imageUrl: "/student_ke_4.jpg", profileUrl: "#" },
   ];
 
   return (
     <section className="relative min-h-[92vh] lg:min-h-screen w-full overflow-hidden bg-white flex items-center justify-center pt-24 sm:pt-28 pb-6 md:pb-10">
-      {/* 1. Base Baby Blue Dot Pattern Background */}
+      {/* 1. Underlying Baby Blue DotPattern Background */}
       <DotPattern
         width={24}
         height={24}
@@ -32,11 +32,11 @@ export function HeroSection() {
         )}
       />
 
-      {/* 2. Desktop Fading Overlays (Unchanged) */}
+      {/* 2. Desktop Fading Overlays */}
       <div className="hidden lg:block absolute top-[48%] -translate-y-1/2 right-[0%] lg:right-[3%] w-[680px] sm:w-[740px] h-[520px] sm:h-[580px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(255,255,255,0.72)_0%,rgba(255,255,255,0.55)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
       <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-[2%] lg:left-[6%] w-[460px] sm:w-[500px] h-[460px] sm:h-[500px] rounded-full [background:radial-gradient(circle_at_center,rgba(255,255,255,0.7)_0%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
 
-      {/* 3. Mobile Precision Fading Overlays: Smooth localized opacity reduction under the exact elements */}
+      {/* 3. Mobile Precision Fading Overlays */}
       <div className="lg:hidden absolute top-[18%] left-1/2 -translate-x-1/2 w-[340px] h-[340px] rounded-full [background:radial-gradient(circle_at_center,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0.5)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
       <div className="lg:hidden absolute top-[52%] left-1/2 -translate-x-1/2 w-[380px] h-[360px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0.5)_55%,rgba(255,255,255,0)_85%)] pointer-events-none z-[2]" />
       <div className="lg:hidden absolute bottom-[4%] left-1/2 -translate-x-1/2 w-[340px] h-[160px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0.4)_50%,rgba(255,255,255,0)_80%)] pointer-events-none z-[2]" />
@@ -326,7 +326,7 @@ export function HeroSection() {
               </Link>
             </div>
 
-            {/* Scaled-up, prominent Social Proof Section */}
+            {/* Scaled-up, prominent Social Proof Section with Kenyan student photos */}
             <div className="flex items-center gap-4 text-left pt-3 border-t border-zinc-200/80 w-full sm:w-auto">
               <AvatarCircles
                 avatarUrls={avatarUrls}

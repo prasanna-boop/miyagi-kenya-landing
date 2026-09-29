@@ -102,7 +102,7 @@ export function Features() {
               </CardContent>
             </Card>
 
-            {/* Card 4: 24/7 AI Tutor with MiyagiGazeAvatar (Mobile: Centered & Mascot on Top; Desktop: Unchanged Left/Right layout) */}
+            {/* Card 4: 24/7 AI Tutor with MiyagiGazeAvatar */}
             <Card className="group relative col-span-full overflow-hidden lg:col-span-3 bg-white border border-zinc-200 hover:border-[#FF6B00]/60 transition-all rounded-2xl p-6 sm:p-7 min-h-[200px] shadow-sm hover:shadow-md">
               <CardContent className="p-0 flex flex-col items-center text-center sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center sm:text-left">
                 
@@ -130,7 +130,7 @@ export function Features() {
               </CardContent>
             </Card>
 
-            {/* Card 5: Complete CBE Coverage (Mobile: Centered & Subject List on Top; Desktop: Unchanged Left/Right layout) */}
+            {/* Card 5: Complete CBE Coverage */}
             <Card className="group relative col-span-full overflow-hidden lg:col-span-3 bg-white border border-zinc-200 hover:border-violet-500/60 transition-all rounded-2xl p-6 sm:p-7 min-h-[200px] shadow-sm hover:shadow-md">
               <CardContent className="p-0 flex flex-col items-center text-center sm:grid sm:grid-cols-2 sm:gap-4 sm:items-center sm:text-left">
                 

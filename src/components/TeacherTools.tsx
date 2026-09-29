@@ -88,7 +88,7 @@ export function TeacherTools() {
       ref={containerRef}
       className="relative py-14 md:py-20 bg-white overflow-hidden transition-colors"
     >
-      {/* 1. Seamless Baby Blue Dot Matrix Background with top & bottom smooth linear blend */}
+      {/* 1. Seamless Baby Blue Dot Matrix Background */}
       <DotPattern
         width={24}
         height={24}
@@ -100,30 +100,32 @@ export function TeacherTools() {
         )}
       />
 
-      {/* 2. Soft radial fade under the cards container to keep cards crisp */}
+      {/* 2. Soft radial fade */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/30 pointer-events-none z-[1]" />
 
       <motion.div
         style={{ opacity, y }}
         className="relative z-10 mx-auto max-w-6xl px-6"
       >
-        {/* Section Header with High-Contrast Solid Orange Pill & Orange 'save 2 hours' Highlight */}
+        {/* Section Header */}
         <div className="w-full max-w-5xl mx-auto mb-10 text-center">
           <span className="text-xs uppercase font-extrabold tracking-wider px-4 py-1.5 rounded-full bg-[#FF6B00] text-white shadow-sm shadow-orange-500/25 mb-4 inline-block">
             FOR TEACHERS
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold tracking-tight text-zinc-950 whitespace-nowrap">
-            Our tools help teachers <span className="text-[#FF6B00]">save 2 hours</span> a day
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950">
+            <span>Our tools help teachers </span>
+            <br className="sm:hidden" />
+            <span className="text-[#FF6B00]">save 2 hours</span> a day
           </h2>
         </div>
 
-        {/* 6-Card Grid */}
+        {/* 6-Card Grid with clean grey border matching other section cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {tools.map((tool, idx) => (
             <Link
               key={idx}
               href={tool.link}
-              className="group relative rounded-2xl bg-white/95 backdrop-blur-sm border border-orange-500/25 hover:border-orange-500/60 p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between min-h-[250px] sm:min-h-[265px] overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(255,107,0,0.18)]"
+              className="group relative rounded-2xl bg-white/95 backdrop-blur-sm border border-zinc-200/90 hover:border-orange-500/60 p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between min-h-[250px] sm:min-h-[265px] overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(255,107,0,0.18)]"
             >
               {/* Left Content Column */}
               <div className="relative z-10 max-w-[62%] sm:max-w-[64%]">
