@@ -13,6 +13,31 @@ type StudentFeedback = {
 
 const allTestimonials: StudentFeedback[] = [
   {
+    name: "John Marston",
+    grade: "Grade 9",
+    feedback: "bro i went from 60/72 to 65/72",
+  },
+  {
+    name: "Alex Githaiga",
+    grade: "Grade 9",
+    feedback: "it is very nice because it has all Kenyan exams and subjects.it is the best learning app.",
+  },
+  {
+    name: "Maxie Wekesa",
+    grade: "Grade 9",
+    feedback: "such good app for revision 10/10 totally recommend",
+  },
+  {
+    name: "Georgina",
+    grade: "Grade 9",
+    feedback: "I rather have Miyagi labs for revision than meta Ai or Chatgpt, this app helped me revise I did my exam and sure thing all the questions it gave me it came in my exam and it's explain much more better",
+  },
+  {
+    name: "philly atieno",
+    grade: "Grade 8",
+    feedback: "It guides you step by step and tells you the topics you really need to work on",
+  },
+  {
     name: "Willy Njoroge",
     grade: "Grade 9",
     feedback: "Miyagi is the best app a person could ever study with. I know I am going to ace my next exam.",
@@ -48,11 +73,6 @@ const allTestimonials: StudentFeedback[] = [
     feedback: "Thanks for the notes! They are well organized and easy to read and understand.",
   },
   {
-    name: "Joan",
-    grade: "Grade 8",
-    feedback: "You are the best.",
-  },
-  {
     name: "Selfa Kuloo",
     grade: "Grade 7",
     feedback: "I like your notes.",
@@ -76,11 +96,6 @@ const allTestimonials: StudentFeedback[] = [
     name: "Nemuel Mwangi",
     grade: "Grade 9",
     feedback: "Very nice, love the work.",
-  },
-  {
-    name: "Kishy",
-    grade: "Grade 9",
-    feedback: "The best!",
   },
   {
     name: "Skyler Jackline",
@@ -108,24 +123,9 @@ const allTestimonials: StudentFeedback[] = [
     feedback: "The website is excellent and top-notch; it serves its purpose wonderfully.",
   },
   {
-    name: "Patience Nyambura",
-    grade: "Grade 11",
-    feedback: "Very nice actually.",
-  },
-  {
-    name: "Tracy",
-    grade: "Grade 11",
-    feedback: "This is really nice.",
-  },
-  {
     name: "Daniel Munyao",
     grade: "Grade 12 (KCSE)",
     feedback: "It is very nice.",
-  },
-  {
-    name: "Laura Anne",
-    grade: "Grade 11",
-    feedback: "This is a good app.",
   },
   {
     name: "Gaby Kano",
