@@ -19,7 +19,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-[92vh] lg:min-h-screen w-full overflow-hidden bg-white flex items-center justify-center pt-24 sm:pt-28 pb-6 md:pb-10">
+    <section className="relative min-h-[92vh] lg:min-h-screen w-full overflow-hidden bg-white flex items-center justify-center pt-24 sm:pt-28 pb-8 sm:pb-12 md:pb-16">
       {/* 1. Underlying Baby Blue DotPattern Background */}
       <DotPattern
         width={24}

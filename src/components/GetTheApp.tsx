@@ -17,13 +17,17 @@ export function GetTheApp() {
   const y = useTransform(scrollYProgress, [0, 0.85], [30, 0]);
 
   return (
-    <section id="app" ref={containerRef} className="py-14 md:py-20 bg-white relative overflow-hidden transition-colors">
+    <section
+      id="app"
+      ref={containerRef}
+      className="py-10 sm:py-14 md:py-18 bg-white relative overflow-hidden transition-colors"
+    >
       <motion.div
         style={{ opacity, y }}
         className="max-w-6xl mx-auto px-6 text-center"
       >
         {/* Section Header */}
-        <div className="max-w-2xl mx-auto mb-10">
+        <div className="max-w-2xl mx-auto mb-8 sm:mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950 mb-3">
             Download the Miyagi app
           </h2>
@@ -33,7 +37,7 @@ export function GetTheApp() {
         </div>
 
         {/* Store Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-10 sm:mb-12">
           {/* Apple App Store */}
           <Link
             href="https://apps.apple.com/us/app/miyagi-labs/id6749786901"

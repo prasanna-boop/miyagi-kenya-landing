@@ -59,7 +59,11 @@ export function PickYourExam() {
   ];
 
   return (
-    <section id="exams" ref={containerRef} className="py-10 md:py-16 bg-white transition-colors">
+    <section
+      id="exams"
+      ref={containerRef}
+      className="py-10 sm:py-14 md:py-18 bg-white transition-colors"
+    >
       <motion.div
         style={{ opacity, y }}
         className="mx-auto max-w-6xl px-6"

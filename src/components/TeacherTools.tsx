@@ -86,7 +86,7 @@ export function TeacherTools() {
     <section
       id="teachers"
       ref={containerRef}
-      className="relative py-14 md:py-20 bg-white overflow-hidden transition-colors"
+      className="relative py-10 sm:py-14 md:py-18 bg-white overflow-hidden transition-colors"
     >
       {/* 1. Seamless Baby Blue Dot Matrix Background */}
       <DotPattern
@@ -108,7 +108,7 @@ export function TeacherTools() {
         className="relative z-10 mx-auto max-w-6xl px-6"
       >
         {/* Section Header */}
-        <div className="w-full max-w-5xl mx-auto mb-10 text-center">
+        <div className="w-full max-w-5xl mx-auto mb-8 sm:mb-10 text-center">
           <span className="text-xs uppercase font-extrabold tracking-wider px-4 py-1.5 rounded-full bg-[#FF6B00] text-white shadow-sm shadow-orange-500/25 mb-4 inline-block">
             FOR TEACHERS
           </span>
@@ -119,7 +119,7 @@ export function TeacherTools() {
           </h2>
         </div>
 
-        {/* 6-Card Grid with clean grey border matching other section cards */}
+        {/* 6-Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {tools.map((tool, idx) => (
             <Link

@@ -98,6 +98,11 @@ const allTestimonials: StudentFeedback[] = [
     feedback: "Very nice, love the work.",
   },
   {
+    name: "Kishy",
+    grade: "Grade 9",
+    feedback: "The best!",
+  },
+  {
     name: "Skyler Jackline",
     grade: "Grade 8",
     feedback: "Miyagi has helped so much. I now know my strong subjects and feel very comfortable learning. Thank you!",
@@ -175,14 +180,14 @@ export function TestimonialsSection() {
     <section
       id="testimonials"
       ref={containerRef}
-      className="py-12 md:py-18 bg-white relative overflow-hidden transition-colors"
+      className="py-10 sm:py-14 md:py-18 bg-white relative overflow-hidden transition-colors"
     >
       <motion.div
         style={{ opacity, y }}
         className="mx-auto max-w-5xl lg:max-w-6xl px-6"
       >
         {/* Unified Title Size (text-3xl sm:text-4xl) */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-zinc-950 tracking-tight">
             What our students are saying
           </h2>
