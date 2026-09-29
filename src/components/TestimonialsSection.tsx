@@ -180,24 +180,24 @@ export function TestimonialsSection() {
     <section
       id="testimonials"
       ref={containerRef}
-      className="py-10 sm:py-14 md:py-18 bg-white relative overflow-hidden transition-colors"
+      className="pt-4 pb-6 sm:pt-6 sm:pb-8 md:py-12 bg-white relative overflow-hidden transition-colors"
     >
       <motion.div
         style={{ opacity, y }}
         className="mx-auto max-w-5xl lg:max-w-6xl px-6"
       >
-        {/* Unified Title Size (text-3xl sm:text-4xl) */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        {/* Unified Title Size */}
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-zinc-950 tracking-tight">
             What our students are saying
           </h2>
         </div>
 
-        {/* 2-Column Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+        {/* 2-Column Showcase (On mobile: stack with compact mascot height) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8 items-center">
           
           {/* Left/Center Sliding Rows */}
-          <div className="lg:col-span-7 xl:col-span-8 flex flex-col gap-5 overflow-hidden w-full">
+          <div className="lg:col-span-7 xl:col-span-8 flex flex-col gap-4 sm:gap-5 overflow-hidden w-full">
             {/* Row 1: Smooth Slow Slide Left */}
             <InfiniteSlider gap={20} duration={75}>
               {row1.map((item, idx) => (
@@ -213,12 +213,12 @@ export function TestimonialsSection() {
             </InfiniteSlider>
           </div>
 
-          {/* Right Column: Big 3D Student Illustration */}
-          <div className="lg:col-span-5 xl:col-span-4 relative flex items-center justify-center min-h-[300px] sm:min-h-[360px]">
+          {/* Right Column: 3D Student Illustration (Compact on mobile to eliminate huge empty space) */}
+          <div className="lg:col-span-5 xl:col-span-4 relative flex items-center justify-center min-h-[160px] sm:min-h-[220px] lg:min-h-[360px] py-1 sm:py-2">
             <motion.div
-              animate={{ y: [0, -8, 0] }}
+              animate={{ y: [0, -6, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-              className="relative z-10 w-64 sm:w-72 md:w-80 lg:w-full max-w-[320px] drop-shadow-[0_20px_40px_rgba(255,107,0,0.22)] select-none pointer-events-none"
+              className="relative z-10 w-44 sm:w-56 md:w-64 lg:w-full max-w-[320px] drop-shadow-[0_16px_32px_rgba(255,107,0,0.2)] select-none pointer-events-none"
             >
               <Image
                 src="/testimonials-mascot.png"

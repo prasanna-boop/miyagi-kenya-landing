@@ -62,20 +62,20 @@ export function PickYourExam() {
     <section
       id="exams"
       ref={containerRef}
-      className="py-10 sm:py-14 md:py-18 bg-white transition-colors"
+      className="pt-4 pb-8 sm:pt-6 sm:pb-12 md:py-14 bg-white transition-colors"
     >
       <motion.div
         style={{ opacity, y }}
         className="mx-auto max-w-6xl px-6"
       >
         {/* Centered Section Header */}
-        <div className="max-w-2xl mx-auto mb-8 sm:mb-10 text-center">
+        <div className="max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-10 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950">
             Pick your exam or grade
           </h2>
         </div>
 
-        {/* 3-Card Grid with customized CTA hover colors matching each card's theme */}
+        {/* 3-Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {exams.map((exam, i) => (
             <Link
@@ -83,7 +83,7 @@ export function PickYourExam() {
               href={exam.url}
               className={`group relative rounded-2xl bg-white border border-zinc-200/90 ${exam.borderColor} p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between min-h-[290px] sm:min-h-[300px] overflow-hidden shadow-sm hover:shadow-xl`}
             >
-              {/* Restored Subtle Top Gradient */}
+              {/* Subtle Top Gradient */}
               <div className={`absolute inset-x-0 top-0 h-36 bg-gradient-to-b ${exam.color} pointer-events-none`} />
 
               <div className="relative z-10">
