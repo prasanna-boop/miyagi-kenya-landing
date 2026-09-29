@@ -21,14 +21,14 @@ export function Features() {
     <section
       id="features"
       ref={containerRef}
-      className="py-10 sm:py-14 md:py-18 bg-white relative z-10 transition-colors"
+      className="pt-2 pb-8 sm:py-10 md:pt-2 md:pb-14 lg:pt-0 lg:pb-16 bg-white relative z-10 transition-colors"
     >
       <motion.div
         style={{ opacity, y }}
         className="mx-auto max-w-5xl lg:max-w-6xl px-6"
       >
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-zinc-950 tracking-tight">
             Everything you need to excel in CBE
           </h2>
